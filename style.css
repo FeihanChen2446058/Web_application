@@ -1,0 +1,53 @@
+* {
+    font-family: 'Press Start 2P', 'DotGothic16', monospace;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #85A643;
+}
+
+#gameCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: crosshair;
+    image-rendering: pixelated; 
+}
+
+#title, #score-box, #guide {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-shadow: 3px 3px 0 #1a1c2c, -2px -2px 0 #1a1c2c;
+    pointer-events: none; 
+}
+
+#title {
+    top: 24px;
+    margin: 0;
+    font-size: 28px;
+    color: #ffcd75;
+}
+
+#score-box {
+    bottom: 24px;
+    font-size: 20px;
+    padding: 10px 24px;
+}
+
+#guide {
+    top: 45%;
+    font-size: 38px;
+    text-align: center;
+    line-height: 1.8;
+    animation: bounce 0.5s steps(4) infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translate(-50%, -50%); }
+    to { transform: translate(-50%, -65%); }
+}
